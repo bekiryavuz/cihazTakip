@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AF5FF30-67A6-4E24-95EE-105B691AB09E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>cihazTakip</RootNamespace>
+    <AssemblyName>cihazTakip</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cihaz Takip Otomasyonu Sistemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cihaz Takip Otomasyonu Sistemi.Designer.cs">
+      <DependentUpon>Cihaz Takip Otomasyonu Sistemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cihaz Takip Otomasyonu Giri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cihaz Takip Otomasyonu Giri.Designer.cs">
+      <DependentUpon>Cihaz Takip Otomasyonu Giri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cihazAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cihazAra.Designer.cs">
+      <DependentUpon>cihazAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cihazRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cihazRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cihazTeslim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cihazTeslim.Designer.cs">
+      <DependentUpon>cihazTeslim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cihazTeslimBilgiler.cs" />
+    <Compile Include="dokumanDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dokumanDuzenle.Designer.cs">
+      <DependentUpon>dokumanDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dokumanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dokumanlar.Designer.cs">
+      <DependentUpon>dokumanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genelAnaliz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="genelAnaliz.Designer.cs">
+      <DependentUpon>genelAnaliz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genelDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="genelDurum.Designer.cs">
+      <DependentUpon>genelDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gorevliDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gorevliDuzenle.Designer.cs">
+      <DependentUpon>gorevliDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="cihazGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cihazGiris.Designer.cs">
+      <DependentUpon>cihazGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telefonDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telefonDuzenle.Designer.cs">
+      <DependentUpon>telefonDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telefonlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telefonlar.Designer.cs">
+      <DependentUpon>telefonlar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cihaz Takip Otomasyonu Sistemi.resx">
+      <DependentUpon>Cihaz Takip Otomasyonu Sistemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cihaz Takip Otomasyonu Giri.resx">
+      <DependentUpon>Cihaz Takip Otomasyonu Giri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cihazAra.resx">
+      <DependentUpon>cihazAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cihazRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cihazRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cihazTeslim.resx">
+      <DependentUpon>cihazTeslim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dokumanDuzenle.resx">
+      <DependentUpon>dokumanDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dokumanlar.resx">
+      <DependentUpon>dokumanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genelAnaliz.resx">
+      <DependentUpon>genelAnaliz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genelDurum.resx">
+      <DependentUpon>genelDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gorevliDuzenle.resx">
+      <DependentUpon>gorevliDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cihazGiris.resx">
+      <DependentUpon>cihazGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telefonDuzenle.resx">
+      <DependentUpon>telefonDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telefonlar.resx">
+      <DependentUpon>telefonlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\cihazTeslimBilgiler.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
